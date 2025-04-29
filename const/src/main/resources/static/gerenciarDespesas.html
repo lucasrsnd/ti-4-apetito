@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Despesas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/gerenciarDespesas.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="icon" href="img/logo-navegador2.0.png" type="image/png">
+</head>
+<nav class="navbar">
+    <a href="#" class="navbar-brand">
+        <i class="fas fa-utensils"></i> Apetito
+    </a>
+
+    <div class="navbar-burger" id="burger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="navbar-menu" id="menu">
+        <li class="navbar-item">
+            <a href="admin.html" class="navbar-link"><i class="fas fa-home"></i> Início</a>
+        </li>
+        <li class="navbar-item">
+            <a href="buscarProdutos.html" class="navbar-link"><i class="fas fa-search"></i> Buscar Produtos</a>
+        </li>
+        <li class="navbar-item">
+            <a href="dashboard.html" class="navbar-link"><i class="fas fa-chart-pie"></i> Gráficos</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarCardapio.html" class="navbar-link"><i class="fas fa-book"></i> Cardápio</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarDespesas.html" class="navbar-link active"><i class="fas fa-money-bill-wave"></i>
+                Despesas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarEstoque.html" class="navbar-link"><i class="fas fa-boxes"></i> Estoque</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarFuncionario.html" class="navbar-link"><i class="fas fa-users"></i> Funcionários</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarMesa.html" class="navbar-link"><i class="fas fa-chair"></i> Mesas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarReserva.html" class="navbar-link"><i class="fas fa-calendar-alt"></i> Reservas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="listaDeCompras.html" class="navbar-link"><i class="fas fa-shopping-cart"></i> Compras</a>
+        </li>
+        <li class="navbar-item">
+            <a href="kanban.html" class="navbar-link"><i class="fas fa-columns"></i> Kanban</a>
+        </li>
+    </ul>
+</nav>
+
+<body>
+    <div class="main-card">
+        <div class="card-header">
+            <h1><i class="fas fa-calculator"></i> Gerenciamento de Despesas</h1>
+        </div>
+
+        <div class="card-body">
+            <div class="form-section">
+                <h2 class="section-title"><i class="fas fa-edit"></i> Adicionar/Editar Despesa</h2>
+                <form id="despesa-form">
+                    <input type="hidden" id="despesa-id">
+                    <div class="form-group">
+                        <input type="text" id="despesa-nome" class="form-control" placeholder="Nome da despesa"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="despesa-parcelas" class="form-control"
+                            placeholder="Quantidade de parcelas" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="despesa-preco" class="form-control" placeholder="Preço" step="0.01"
+                            min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="despesa-vencimento" class="form-control" required>
+                    </div>
+                    <button type="submit" class="btn btn-success"><i class="fas fa-save"></i> Salvar</button>
+                    <button type="button" id="cancel-btn" class="btn btn-gray"><i class="fas fa-times"></i>
+                        Cancelar</button>
+                </form>
+            </div>
+
+            <div class="list-section">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2 class="section-title"><i class="fas fa-list"></i> Lista de Despesas</h2>
+                    <button id="refresh-btn" class="btn btn-primary"><i class="fas fa-sync-alt"></i> Atualizar</button>
+                </div>
+
+                <ul id="despesas-list" class="despesas-list">
+                    <li class="empty-message">Nenhuma despesa cadastrada</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-config">
+        <footer class="footer-07">
+            <p class="copyright">
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Esse software foi
+                desenvolvido <i class="ion-ios-heart" aria-hidden="true"></i> por <a href=""
+                    target="_blank">Apetito.restaurante</a>
+        </footer>
+    </div>
+
+
+    <script src="js/gerenciarDespesas.js"></script>
+    <script src="js/menuHamburguer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido - Restaurante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/pedido.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="img/logo-navegador2.0.png" type="image/png">
+</head>
+<nav class="navbar">
+    <a href="#" class="navbar-brand">
+        <i class="fas fa-utensils"></i> Apetito
+    </a>
+
+    <ul class="navbar-menu" id="menu">
+        <li class="navbar-item">
+            <a href="cliente.html" class="navbar-link"><i class="fas fa-home"></i> Início</a>
+        </li>
+        <li class="navbar-item">
+            <a href="pedido.html" class="navbar-link active"><i class="fas fa-concierge-bell"></i> Fazer Pedido</a>
+        </li>
+        <li class="navbar-item">
+            <a href="criarReserva.html" class="navbar-link"><i class="fas fa-calendar-alt"></i> Fazer Reserva</a>
+        </li>
+        <li class="navbar-item user-profile-nav">
+            <div class="user-avatar-nav">C</div>
+            <span class="user-name-nav">Cliente</span>
+        </li>
+    </ul>
+</nav>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-utensils"></i> Pedido - Restaurante</h1>
+            <button class="btn-criarPedido" onclick="criarPedido()">
+                <i class="fas fa-plus"></i> Criar Novo Pedido
+            </button>
+        </header>
+
+        <section class="section">
+            <h2><i class="fas fa-list-alt"></i> Escolha o tipo de pedido</h2>
+            <div class="form-group">
+                <select id="tipoPedido" class="form-control" onchange="atualizarTipoPedido()">
+                    <option value="online">Online</option>
+                    <option value="mesa">Mesa</option>
+                </select>
+            </div>
+
+            <div id="mesaSelecionada" class="hidden">
+                <h3><i class="fas fa-chair"></i> Escolha uma Mesa</h3>
+                <select id="mesaSelect" class="form-control"></select>
+            </div>
+
+            <div id="dadosCliente" class="hidden">
+                <h3><i class="fas fa-user"></i> Informe seus dados</h3>
+                <div class="form-group">
+                    <label for="nomeCliente">Nome:</label>
+                    <input type="text" id="nomeCliente" class="form-control" placeholder="Seu nome completo">
+                </div>
+                <div class="form-group">
+                    <label for="enderecoCliente">Endereço:</label>
+                    <input type="text" id="enderecoCliente" class="form-control" placeholder="Seu endereço completo">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-book"></i> Cardápio</h2>
+            <div id="cardapio" class="cardapio-grid"></div>
+        </section>
+
+        <section class="section">
+            <h2><i class="fas fa-shopping-cart"></i> Carrinho</h2>
+            <div id="carrinho" class="carrinho-list"></div>
+            <div class="total-container">
+                <p id="totalCarrinho" class="total">Total: R$ 0.00</p>
+                <button class="btn-primary" onclick="finalizarPedido()">
+                    <i class="fas fa-check"></i> Finalizar Pedido
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <div id="modalAvaliacao" class="modal">
+        <div class="modal-content">
+            <h2><i class="fas fa-star"></i> Obrigado pelo seu pedido! 🥳</h2>
+            <p>Como foi sua experiência?</p>
+
+            <div class="avaliacao">
+                <label>Ambiente:</label>
+                <div class="estrelas" id="ambiente"></div>
+            </div>
+
+            <div class="avaliacao">
+                <label>Comida:</label>
+                <div class="estrelas" id="comida"></div>
+            </div>
+
+            <div class="avaliacao">
+                <label>Atendimento:</label>
+                <div class="estrelas" id="atendimento"></div>
+            </div>
+
+            <div class="form-group">
+                <label>Comentário:</label>
+                <textarea id="comentario" rows="4" placeholder="Deixe seu feedback..."></textarea>
+            </div>
+
+            <button class="btn-primary" onclick="enviarAvaliacao()">
+                <i class="fas fa-paper-plane"></i> Enviar Avaliação
+            </button>
+        </div>
+    </div>
+
+    <div class="footer-config">
+        <footer class="footer-07">
+            <p class="copyright">
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Esse software foi
+                desenvolvido <i class="ion-ios-heart" aria-hidden="true"></i> por <a href=""
+                    target="_blank">Apetito.restaurante</a>
+        </footer>
+    </div>
+    
+    <script src="js/pedido.js"></script>
+    <script src="js/menuHamburguer.js"></script>
+</body>
+
+</html>

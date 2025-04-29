@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Funcionários</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/gerenciarFuncionario.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="icon" href="img/logo-navegador2.0.png" type="image/png">
+</head>
+<nav class="navbar">
+    <a href="#" class="navbar-brand">
+        <i class="fas fa-utensils"></i> Apetito
+    </a>
+
+    <div class="navbar-burger" id="burger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="navbar-menu" id="menu">
+        <li class="navbar-item">
+            <a href="admin.html" class="navbar-link"><i class="fas fa-home"></i> Início</a>
+        </li>
+        <li class="navbar-item">
+            <a href="buscarProdutos.html" class="navbar-link"><i class="fas fa-search"></i> Buscar Produtos</a>
+        </li>
+        <li class="navbar-item">
+            <a href="dashboard.html" class="navbar-link"><i class="fas fa-chart-pie"></i> Gráficos</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarCardapio.html" class="navbar-link"><i class="fas fa-book"></i> Cardápio</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarDespesas.html" class="navbar-link"><i class="fas fa-money-bill-wave"></i> Despesas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarEstoque.html" class="navbar-link"><i class="fas fa-boxes"></i> Estoque</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarFuncionario.html" class="navbar-link active"><i class="fas fa-users"></i> Funcionários</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarMesa.html" class="navbar-link"><i class="fas fa-chair"></i> Mesas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarReserva.html" class="navbar-link"><i class="fas fa-calendar-alt"></i> Reservas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="listaDeCompras.html" class="navbar-link"><i class="fas fa-shopping-cart"></i> Compras</a>
+        </li>
+        <li class="navbar-item">
+            <a href="kanban.html" class="navbar-link"><i class="fas fa-columns"></i> Kanban</a>
+        </li>
+    </ul>
+</nav>
+
+<body>
+    <div class="funcionario-container">
+        <header class="funcionario-header">
+            <h1><i class="fas fa-users"></i> Gerenciamento de Funcionários</h1>
+            <p>Cadastro e controle da equipe do restaurante</p>
+        </header>
+
+        <div class="container">
+            <section class="form-section">
+                <div class="form-card">
+                    <h2><i class="fas fa-user-plus"></i> Adicionar/Editar Funcionário</h2>
+                    <form id="funcionario-form">
+                        <input type="hidden" id="funcionario-id">
+
+                        <div class="form-group">
+                            <label for="funcionario-nome"><i class="fas fa-id-card"></i> Nome Completo</label>
+                            <input type="text" id="funcionario-nome" placeholder="Digite o nome completo" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="funcionario-cpf"><i class="fas fa-id-badge"></i> CPF</label>
+                                <input type="text" id="funcionario-cpf" placeholder="000.000.000-00" maxlength="14"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="funcionario-telefone"><i class="fas fa-phone"></i> Telefone</label>
+                                <input type="text" id="funcionario-telefone" placeholder="(00) 00000-0000"
+                                    maxlength="15" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="funcionario-email"><i class="fas fa-envelope"></i> E-mail</label>
+                            <input type="email" id="funcionario-email" placeholder="exemplo@dominio.com" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="funcionario-salario"><i class="fas fa-money-bill-wave"></i> Salário</label>
+                                <div class="input-price">
+                                    <span>R$</span>
+                                    <input type="number" id="funcionario-salario" placeholder="0,00" step="0.01" min="0"
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="funcionario-cargo"><i class="fas fa-briefcase"></i> Cargo</label>
+                                <select id="funcionario-cargo" required>
+                                    <option value="">Selecione o cargo</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="placa-container" class="form-group placa-container" style="display: none;">
+                            <label for="funcionario-placa"><i class="fas fa-motorcycle"></i> Placa da Moto</label>
+                            <input type="text" id="funcionario-placa" placeholder="AAA-0000">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" id="submit-btn" class="btn-primary">
+                                <i class="fas fa-save"></i> Salvar
+                            </button>
+                            <button type="button" id="cancel-btn" class="btn-outline">
+                                <i class="fas fa-times"></i> Cancelar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="list-section">
+                <div class="list-header">
+                    <h2><i class="fas fa-list"></i> Lista de Funcionários</h2>
+                    <button id="refresh-btn" class="btn-refresh">
+                        <i class="fas fa-sync-alt"></i> Atualizar
+                    </button>
+                </div>
+
+                <div id="funcionarios-list" class="funcionarios-grid"></div>
+            </section>
+        </div>
+    </div>
+
+    <div class="footer-config">
+        <footer class="footer-07">
+            <p class="copyright">
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Esse software foi
+                desenvolvido <i class="ion-ios-heart" aria-hidden="true"></i> por <a href=""
+                    target="_blank">Apetito.restaurante</a>
+        </footer>
+    </div>
+
+
+    <script src="js/gerenciarFuncionario.js"></script>
+    <script src="js/menuHamburguer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Apetito
+authors:
+  - family-names: Érico dos Santos
+    given-names: Davi
+  - family-names: Maia da Costa
+    given-names: João Gabriel
+  - family-names: Caldas Pacheco
+    given-names: Leandro
+  - family-names: Alves Resende
+    given-names: Lucas
+  - family-names: Maia Rocha
+    given-names: Lucas
+  - family-names: Porto de Andrade
+    given-names: Lucas
+  - family-names: Amaral Lessa Xavier
+    given-names: Miguel
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Ishitani
+    given-names: Lucila
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Lúcia da Silva
+    given-names: Soraia
+keywords:
+  - Restaurante
+  - Gestão
+repository-code: 
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2022-07-14

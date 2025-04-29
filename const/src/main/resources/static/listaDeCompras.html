@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/listaDeCompras.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="icon" href="img/logo-navegador2.0.png" type="image/png">
+</head>
+<nav class="navbar">
+    <a href="#" class="navbar-brand">
+        <i class="fas fa-utensils"></i> Apetito
+    </a>
+
+    <div class="navbar-burger" id="burger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="navbar-menu" id="menu">
+        <li class="navbar-item">
+            <a href="admin.html" class="navbar-link"><i class="fas fa-home"></i> Início</a>
+        </li>
+        <li class="navbar-item">
+            <a href="buscarProdutos.html" class="navbar-link"><i class="fas fa-search"></i> Buscar Produtos</a>
+        </li>
+        <li class="navbar-item">
+            <a href="dashboard.html" class="navbar-link"><i class="fas fa-chart-pie"></i> Gráficos</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarCardapio.html" class="navbar-link"><i class="fas fa-book"></i> Cardápio</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarDespesas.html" class="navbar-link"><i class="fas fa-money-bill-wave"></i> Despesas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarEstoque.html" class="navbar-link"><i class="fas fa-boxes"></i> Estoque</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarFuncionario.html" class="navbar-link"><i class="fas fa-users"></i> Funcionários</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarMesa.html" class="navbar-link"><i class="fas fa-chair"></i> Mesas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarReserva.html" class="navbar-link"><i class="fas fa-calendar-alt"></i> Reservas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="listaDeCompras.html" class="navbar-link active"><i class="fas fa-shopping-cart"></i> Compras</a>
+        </li>
+        <li class="navbar-item">
+            <a href="kanban.html" class="navbar-link"><i class="fas fa-columns"></i> Kanban</a>
+        </li>
+    </ul>
+</nav>
+
+<body>
+    <div class="shopping-container">
+        <header class="shopping-header">
+            <h1><i class="fas fa-shopping-cart"></i> Lista de Compras</h1>
+            <p>Organize seus itens para comprar</p>
+        </header>
+
+        <form id="formItem" class="add-item-form">
+            <div class="input-group">
+                <input type="text" id="nomeItem" placeholder="Digite um novo item..." required>
+                <button type="submit" class="btn-add">
+                    <i class="fas fa-plus"></i> Adicionar
+                </button>
+            </div>
+            <div class="category-filter">
+                <span>Filtrar:</span>
+                <button type="button" class="filter-btn active" data-filter="all">Todos</button>
+                <button type="button" class="filter-btn" data-filter="pending">Pendentes</button>
+                <button type="button" class="filter-btn" data-filter="completed">Concluídos</button>
+            </div>
+        </form>
+
+        <div class="shopping-stats">
+            <div class="stat-item">
+                <span class="stat-number" id="total-items">0</span>
+                <span class="stat-label">Itens</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="pending-items">0</span>
+                <span class="stat-label">Pendentes</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="completed-items">0</span>
+                <span class="stat-label">Concluídos</span>
+            </div>
+        </div>
+
+        <div id="listaCompras" class="shopping-list"></div>
+
+        <div class="shopping-actions">
+            <button id="clear-completed" class="btn-action">
+                <i class="fas fa-trash-alt"></i> Limpar concluídos
+            </button>
+            <button id="save-list" class="btn-action">
+                <i class="fas fa-save"></i> Salvar lista
+            </button>
+        </div>
+    </div>
+    <div class="footer-config">
+        <footer class="footer-07">
+            <p class="copyright">
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Esse software foi
+                desenvolvido <i class="ion-ios-heart" aria-hidden="true"></i> por <a href=""
+                    target="_blank">Apetito.restaurante</a>
+        </footer>
+    </div>
+
+    <script src="js/listaDeCompras.js"></script>
+    <script src="js/menuHamburguer.js"></script>
+</body>
+
+</html>
