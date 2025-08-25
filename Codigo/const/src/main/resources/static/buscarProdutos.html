@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador de Preços</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/buscarProdutos.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="icon" href="img/logo-navegador2.0.png" type="image/png">
+
+</head>
+<nav class="navbar">
+    <a href="#" class="navbar-brand">
+        <i class="fas fa-utensils"></i> Apetito
+    </a>
+
+    <div class="navbar-burger" id="burger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="navbar-menu" id="menu">
+        <li class="navbar-item">
+            <a href="admin.html" class="navbar-link"><i class="fas fa-home"></i> Início</a>
+        </li>
+        <li class="navbar-item">
+            <a href="buscarProdutos.html" class="navbar-link active"><i class="fas fa-search"></i> Buscar Produtos</a>
+        </li>
+        <li class="navbar-item">
+            <a href="dashboard.html" class="navbar-link"><i class="fas fa-chart-pie"></i> Gráficos</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarCardapio.html" class="navbar-link"><i class="fas fa-book"></i> Cardápio</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarDespesas.html" class="navbar-link"><i class="fas fa-money-bill-wave"></i> Despesas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarEstoque.html" class="navbar-link"><i class="fas fa-boxes"></i> Estoque</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarFuncionario.html" class="navbar-link"><i class="fas fa-users"></i> Funcionários</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarMesa.html" class="navbar-link"><i class="fas fa-chair"></i> Mesas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarReserva.html" class="navbar-link"><i class="fas fa-calendar-alt"></i> Reservas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="listaDeCompras.html" class="navbar-link"><i class="fas fa-shopping-cart"></i> Compras</a>
+        </li>
+        <li class="navbar-item">
+            <a href="Tarefas.html" class="navbar-link"><i class="fas fa-columns"></i> Tarefas</a>
+        </li>
+    </ul>
+</nav>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-search"></i> Buscar Produtos</h1>
+            <p>Encontre informações nutricionais e preços de produtos alimentícios</p>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="product-input" placeholder="Ex: Arroz integral, Leite em pó, Biscoito...">
+            <button id="search-button">
+                <i class="fas fa-search"></i> Buscar
+            </button>
+        </div>
+
+        <div class="results-container" id="results-container">
+            <div class="empty-state">
+                <i class="fas fa-search"></i>
+                <h3>Busque por produtos alimentícios</h3>
+                <p>Digite o nome de um produto acima para ver informações detalhadas</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-config">
+        <footer class="footer-07">
+            <p class="copyright">
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Esse software foi
+                desenvolvido <i class="ion-ios-heart" aria-hidden="true"></i> por <a href=""
+                    target="_blank">Apetito.restaurante</a>
+        </footer>
+    </div>
+
+
+    <script src="js/buscarProdutos.js"></script>
+    <script src="js/menuHamburguer.js"></script>
+</body>
+
+</html>

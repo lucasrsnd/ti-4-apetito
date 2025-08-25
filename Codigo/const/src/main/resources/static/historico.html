@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Pedidos - Restaurante</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pedido.css">
+    <link rel="stylesheet" href="css/historico.css">
+    <link rel="icon" href="img/logo-navegador2.0.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">
+            <i class="fas fa-utensils"></i> Apetito
+        </a>
+
+        <ul class="navbar-menu" id="menu">
+            <li class="navbar-item">
+                <a href="cliente.html" class="navbar-link"><i class="fas fa-home"></i> Início</a>
+            </li>
+            <li class="navbar-item">
+                <a href="pedido.html" class="navbar-link"><i class="fas fa-concierge-bell"></i> Fazer Pedido</a>
+            </li>
+            <li class="navbar-item">
+                <a href="criarReserva.html" class="navbar-link"><i class="fas fa-calendar-alt"></i> Fazer Reserva</a>
+            </li>
+            <li class="navbar-item user-profile-nav">
+                <div class="user-avatar-nav">C</div>
+                <span class="user-name-nav">Cliente</span>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-history"></i> Histórico de Pedidos</h1>
+            <button class="btn-sair" onclick="limparSessao()">
+                <i class="fas fa-sign-out-alt"></i> Sair
+            </button>
+        </header>
+
+        <section class="section">
+            <div id="historicoPedidos"></div>
+        </section>
+    </div>
+
+    <div class="footer-config">
+        <footer class="footer-07">
+            <p class="copyright">
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Esse software foi
+                desenvolvido <i class="ion-ios-heart" aria-hidden="true"></i> por <a href="" target="_blank">Apetito.restaurante</a>
+            </p>
+        </footer>
+    </div>
+<script src="js/historico.js"></script>
+</body>
+</html>

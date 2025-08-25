@@ -1,0 +1,91 @@
+/* alerts.css */
+
+/* Estilo base de todos os alerts */
+.alert {
+  padding: 16px;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  margin: 1rem 0;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+/* Alert de sucesso */
+.alert-success {
+  background-color: #d1f7d6;
+  color: #14532d;
+  border-color: #22c55e;
+}
+
+/* Alert de erro */
+.alert-error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-color: #ef4444;
+}
+
+/* Alert de aviso */
+.alert-warning {
+  background-color: #fef9c3;
+  color: #78350f;
+  border-color: #facc15;
+}
+
+/* Alert de informação */
+.alert-info {
+  background-color: #e0f2fe;
+  color: #075985;
+  border-color: #38bdf8;
+}
+
+/* Ícones opcionais */
+.alert .icon {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+/* Para alertas que podem ser fechados */
+.alert-dismissible {
+  position: relative;
+  padding-right: 2.5rem;
+}
+
+.alert-dismissible .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* SweetAlert2 customização */
+
+.custom-alert {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  font-family: 'Courier New', monospace;
+  border: 2px solid #facc15 !important; /* Amarelo */
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.custom-button {
+  background-color: #facc15 !important; /* Amarelo */
+  color: #000000 !important;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-button:hover {
+  background-color: #eab308 !important;
+}
+

@@ -1,0 +1,23 @@
+.custom-swal-popup {
+  border: 2px solid #ffc107 !important;
+  border-radius: 0 !important;
+}
+
+.custom-swal-title {
+  color: #000000 !important;
+  border-bottom: 1px solid #ffc107 !important;
+  padding-bottom: 10px !important;
+}
+
+.custom-swal-confirm-button {
+  background-color: #ffc107 !important;
+  color: #000000 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  font-family: 'Courier New', monospace !important;
+}
+
+.custom-swal-cancel-button {
+  font-family: 'Courier New', monospace !important;
+  border-radius: 0 !important;
+}

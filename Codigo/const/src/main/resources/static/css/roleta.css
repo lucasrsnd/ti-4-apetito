@@ -1,0 +1,339 @@
+.roleta-btn-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.roleta-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--dark-color);
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.roleta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+}
+
+.roleta-btn i {
+    font-size: 18px;
+}
+
+.roleta-modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+.roleta-modal-content {
+    background: white;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 600px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.roleta-close-btn {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--gray-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.roleta-close-btn:hover {
+    color: var(--dark-color);
+}
+
+.roleta-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+}
+
+.roleta {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 8px solid #f8f8f8;
+    box-shadow: 0 0 0 8px var(--dark-color), 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: transform 5s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+}
+
+
+.roleta-setor span {
+    transform: rotate(90deg);
+    white-space: nowrap;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.roleta-ponto {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--danger-color);
+    border-radius: 50%;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.roleta-ponto::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid var(--danger-color);
+    top: 15px;
+    left: 0;
+}
+
+.roleta-girar-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 30px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--dark-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.roleta-girar-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.roleta-girar-btn:disabled {
+    background: #e0e0e0;
+    color: #9e9e9e;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.roleta-resultado {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    background: #f8f8f8;
+    transition: var(--transition);
+}
+
+.roleta-opcoes {
+    margin-top: 20px;
+}
+
+.roleta-resgate-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--primary-color);
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.roleta-resgate-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.roleta-confirmar-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--primary-color);
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.roleta-confirmar-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.roleta-codigo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    padding: 15px;
+    background: var(--dark-color);
+    color: var(--light-color);
+    border-radius: var(--border-radius);
+    margin: 15px auto;
+    width: fit-content;
+    font-family: 'Courier New', monospace;
+}
+
+#textoResultado {
+    color: #212529 !important;
+}
+.roleta-setor {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transform-origin: bottom right;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-left: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.roleta-setor span {
+    transform: rotate(90deg);
+    white-space: nowrap;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+}
+/* Roleta com 6 setores de 60 graus cada */
+.roleta-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+}
+
+.roleta {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 8px solid #f8f8f8;
+    box-shadow: 0 0 0 8px var(--dark-color), 0 0 30px rgba(0, 0, 0, 0.1);
+    transition: transform 5s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+}
+
+.roleta-setor {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transform-origin: bottom right;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-left: 40px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajuste preciso para 6 setores */
+.roleta-setor:nth-child(1) {
+    background: #ffa000;
+    transform: rotate(0deg);
+}
+.roleta-setor:nth-child(2) {
+    background: #212529;
+    transform: rotate(50deg);
+}
+.roleta-setor:nth-child(3) {
+    background: #ffa000;
+    transform: rotate(110deg);
+}
+.roleta-setor:nth-child(4) {
+    background: #212529;
+    transform: rotate(160deg);
+}
+.roleta-setor:nth-child(5) {
+    background: #ffa000;
+    transform: rotate(230deg);
+}
+.roleta-setor:nth-child(6) {
+    background: #212529;
+    transform: rotate(270deg);
+}
+
+.roleta-setor span {
+    white-space: nowrap;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    width: 80px;
+    text-align: center;
+}
+
+/* Mantenha o resto do CSS igual */
+.roleta-ponto {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--danger-color);
+    border-radius: 50%;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.roleta-ponto::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 20px solid var(--danger-color);
+    top: 15px;
+    left: 0;
+}

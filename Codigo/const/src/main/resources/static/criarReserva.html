@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Restaurante</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/criarReserva.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="img/logo-navegador2.0.png" type="image/png">
+
+    <link rel="stylesheet" href="css/alert.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/alert.js"></script>
+</head>
+<nav class="navbar">
+    <a href="#" class="navbar-brand">
+        <i class="fas fa-utensils"></i> Apetito
+    </a>
+
+    <ul class="navbar-menu" id="menu">
+        <li class="navbar-item">
+            <a href="cliente.html" class="navbar-link"><i class="fas fa-home"></i> Início</a>
+        </li>
+        <li class="navbar-item">
+            <a href="pedido.html" class="navbar-link"><i class="fas fa-concierge-bell"></i> Fazer Pedido</a>
+        </li>
+        <li class="navbar-item">
+            <a href="criarReserva.html" class="navbar-link active"><i class="fas fa-calendar-alt"></i> Fazer Reserva</a>
+        </li>
+        <li class="navbar-item user-profile-nav">
+            <div class="user-avatar-nav">C</div>
+            <span class="user-name-nav">Cliente</span>
+        </li>
+    </ul>
+</nav>
+
+<body>
+    <div class="reserva-container">
+        <div class="reserva-header">
+            <h1><i class="fas fa-calendar-alt"></i> Fazer Reserva</h1>
+            <p>Garanta seu lugar em nosso restaurante</p>
+        </div>
+
+        <div class="reserva-content">
+            <form id="formReserva" class="reserva-form">
+                <div class="form-group">
+                    <label for="nome"><i class="fas fa-user"></i> Seu Nome</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone"><i class="fas fa-phone"></i> Telefone</label>
+                    <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="data"><i class="fas fa-calendar-day"></i> Data</label>
+                        <input type="date" id="data" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hora"><i class="fas fa-clock"></i> Horário</label>
+                        <input type="time" id="hora" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-reservar">
+                    <i class="fas fa-check-circle"></i> Confirmar Reserva
+                </button>
+            </form>
+
+            <div class="mesas-section">
+                <h3><i class="fas fa-chair"></i> Selecione sua Mesa:</h3>
+                <div id="mesas" class="mesas-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-config">
+        <footer class="footer-07">
+            <p class="copyright">
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Esse software foi
+                desenvolvido <i class="ion-ios-heart" aria-hidden="true"></i> por <a href=""
+                    target="_blank">Apetito.restaurante</a>
+        </footer>
+    </div>
+
+
+    <script src="js/criarReserva.js"></script>
+    <script src="js/menuHamburguer.js"></script>
+</body>
+
+</html>

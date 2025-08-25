@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="icon" href="img/logo-navegador2.0.png" type="image/png">
+</head>
+
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <a href="index.html" class="navbar-brand">
+                <i class="fas fa-utensils"></i> Apetito
+            </a>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
+                <li><a href="buscarProdutos.html"><i class="fas fa-search"></i> <span>Buscar Produtos</span></a></li>
+                <li><a href="dashboard.html"><i class="fas fa-chart-line"></i> <span>Gráficos</span></a></li>
+                <li><a href="gerenciarCardapio.html"><i class="fas fa-utensils"></i> <span>Cardápio</span></a></li>
+                <li><a href="gerenciarDespesas.html"><i class="fas fa-money-bill-wave"></i> <span>Despesas</span></a>
+                </li>
+                <li><a href="gerenciarEstoque.html"><i class="fas fa-boxes"></i> <span>Estoque</span></a></li>
+                <li><a href="gerenciarFuncionario.html"><i class="fas fa-users"></i> <span>Funcionários</span></a></li>
+                <li><a href="gerenciarMesa.html"><i class="fas fa-chair"></i> <span>Mesas</span></a></li>
+                <li><a href="gerenciarReserva.html"><i class="fas fa-calendar-check"></i> <span>Reservas</span></a></li>
+                <li><a href="listaDeCompras.html"><i class="fas fa-shopping-cart"></i> <span>Lista de Compras</span></a>
+                </li>
+                <li><a href="Tarefas.html"><i class="fas fa-columns"></i> <span>Tarefas</span></a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="header">
+                <h1>Painel Administrativo</h1>
+                <div class="user-info">
+                    <div class="user-avatar">AD</div>
+                    <span>Admin</span>
+                </div>
+            </div>
+
+            <div class="welcome-banner">
+                <div class="welcome-text">
+                    <h2>Bem-vindo, Administrador!</h2>
+                    <p>Acesse todas as funcionalidades do sistema pelo menu lateral</p>
+                </div>
+                <i class="fas fa-utensils" style="font-size: 50px; opacity: 0.8;"></i>
+            </div>
+
+            <div class="quick-stats">
+                <div class="stat-card feature-card">
+                    <i class="fas fa-chart-pie"></i>
+                    <h3>Análise Completa</h3>
+                    <p>Acesse relatórios detalhados e gráficos de desempenho</p>
+                </div>
+                <div class="stat-card feature-card">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Controle Total</h3>
+                    <p>Gerencie todos os aspectos do seu restaurante</p>
+                </div>
+                <div class="stat-card feature-card">
+                    <i class="fas fa-bell"></i>
+                    <h3>Alertas Inteligentes</h3>
+                    <p>Receba notificações sobre estoque e reservas</p>
+                </div>
+                <div class="stat-card feature-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Otimização</h3>
+                    <p>Ferramentas para melhorar seu fluxo de trabalho</p>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <a href="buscarProdutos.html" class="dashboard-card">
+                    <i class="fas fa-search"></i>
+                    <h3>Buscar Produtos</h3>
+                    <p>Pesquise por produtos alimentícios</p>
+                </a>
+                <a href="dashboard.html" class="dashboard-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Gráficos</h3>
+                    <p>Relatórios financeiros e análises</p>
+                </a>
+                <a href="gerenciarCardapio.html" class="dashboard-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Gerenciar Cardápio</h3>
+                    <p>Adicione ou edite itens do cardápio</p>
+                </a>
+                <a href="gerenciarDespesas.html" class="dashboard-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>Gerenciar Despesas</h3>
+                    <p>Controle as despesas do restaurante</p>
+                </a>
+                <a href="gerenciarEstoque.html" class="dashboard-card">
+                    <i class="fas fa-boxes"></i>
+                    <h3>Gerenciar Estoque</h3>
+                    <p>Controle de produtos e ingredientes</p>
+                </a>
+                <a href="gerenciarFuncionario.html" class="dashboard-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Gerenciar Funcionários</h3>
+                    <p>Cadastro e gestão de equipe</p>
+                </a>
+                <a href="gerenciarMesa.html" class="dashboard-card">
+                    <i class="fas fa-chair"></i>
+                    <h3>Gerenciar Mesas</h3>
+                    <p>Controle de mesas e ocupação</p>
+                </a>
+                <a href="gerenciarReserva.html" class="dashboard-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Gerenciar Reservas</h3>
+                    <p>Controle de reservas e agendamentos</p>
+                </a>
+                <a href="listaDeCompras.html" class="dashboard-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Lista de Compras</h3>
+                    <p>Organize os itens para comprar</p>
+                </a>
+                <a href="Tarefas.html" class="dashboard-card">
+                    <i class="fas fa-columns"></i>
+                    <h3>Tarefas</h3>
+                    <p>Quadro de tarefas e organização</p>
+                </a>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

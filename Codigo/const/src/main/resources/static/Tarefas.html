@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kanban Moderno</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/logo-navegador2.0.png" type="image/png">
+    <link rel="stylesheet" href="css/Tarefas.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
+
+    <link rel="stylesheet" href="css/alert.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/alert.js"></script>
+</head>
+<nav class="navbar">
+    <a href="#" class="navbar-brand">
+        <i class="fas fa-utensils"></i> Apetito
+    </a>
+
+    <div class="navbar-burger" id="burger">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <ul class="navbar-menu" id="menu">
+        <li class="navbar-item">
+            <a href="admin.html" class="navbar-link"><i class="fas fa-home"></i> Início</a>
+        </li>
+        <li class="navbar-item">
+            <a href="buscarProdutos.html" class="navbar-link"><i class="fas fa-search"></i> Buscar Produtos</a>
+        </li>
+        <li class="navbar-item">
+            <a href="dashboard.html" class="navbar-link"><i class="fas fa-chart-pie"></i> Gráficos</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarCardapio.html" class="navbar-link"><i class="fas fa-book"></i> Cardápio</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarDespesas.html" class="navbar-link"><i class="fas fa-money-bill-wave"></i> Despesas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarEstoque.html" class="navbar-link"><i class="fas fa-boxes"></i> Estoque</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarFuncionario.html" class="navbar-link"><i class="fas fa-users"></i> Funcionários</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarMesa.html" class="navbar-link"><i class="fas fa-chair"></i> Mesas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="gerenciarReserva.html" class="navbar-link"><i class="fas fa-calendar-alt"></i> Reservas</a>
+        </li>
+        <li class="navbar-item">
+            <a href="listaDeCompras.html" class="navbar-link"><i class="fas fa-shopping-cart"></i> Compras</a>
+        </li>
+        <li class="navbar-item">
+            <a href="Tarefas.html" class="navbar-link active"><i class="fas fa-columns"></i> Tarefas</a>
+        </li>
+    </ul>
+</nav>
+
+<body>
+    <button id="adicionarColunaBtn">+ Nova Coluna</button>
+    <main id="kanban"></main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2>Editar Cartão</h2>
+            <input id="tituloCartao" placeholder="Título">
+            <textarea id="descricaoCartao" placeholder="Descrição"></textarea>
+            <textarea id="comentariosCartao" placeholder="Comentários (separados por linha)"></textarea>
+            <div class="modal-actions">
+                <button id="salvarEdicao">Salvar</button>
+                <button id="cancelarEdicao">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/Tarefas.js"></script>
+</body>
+
+</html>
